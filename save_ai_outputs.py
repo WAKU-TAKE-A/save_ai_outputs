@@ -1,16 +1,9 @@
 from pathlib import Path
 
-# ============================================================
-# Configuration (AI-editable)
-# ============================================================
-
 # Output directory name.
 # Generative AI MAY change this value if needed.
 OUTPUT_DIR_NAME = "contents_code"
 
-# ------------------------------------------------------------
-# Generated contents
-# ------------------------------------------------------------
 # Generative AI MAY output ONLY this dictionary when requested.
 # Keys   : output file names
 # Values : file contents (Markdown, code, documents, etc.)
@@ -20,10 +13,6 @@ contents_code = {
     "hoge1.md": r"(hoge1 content)",
     "hoge2.md": r"(hoge2 content)",
 }
-
-# ============================================================
-# Implementation (usually unchanged)
-# ============================================================
 
 def main():
     output_dir = Path(__file__).resolve().parent / OUTPUT_DIR_NAME
