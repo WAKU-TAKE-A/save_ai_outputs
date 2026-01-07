@@ -1,4 +1,4 @@
-# save_ai_outputs.py
+# save-ai-outputs.py
 
 生成AIに **ファイル出力用の Python スクリプトそのものを生成させる** ための、
 最小構成テンプレートです。
@@ -94,5 +94,6 @@ if __name__ == "__main__":
 ## ライセンス
 
 MIT License
+
 
 
