@@ -15,8 +15,15 @@ contents_code = {
 }
 
 def main():
-    output_dir = Path(__file__).resolve().parent / OUTPUT_DIR_NAME
-    output_dir.mkdir(exist_ok=True)
+    base_dir = Path(__file__).resolve().parent
+    
+    # 決定されたディレクトリ名に基づくパスの解決
+    if OUTPUT_DIR_NAME in ("", ".", "./", ".\\"):
+        output_dir = base_dir
+    else:
+        output_dir = base_dir / OUTPUT_DIR_NAME
+        
+    output_dir.mkdir(exist_ok=True, parents=True)
 
     for name, content in contents_code.items():
         path = output_dir / name
